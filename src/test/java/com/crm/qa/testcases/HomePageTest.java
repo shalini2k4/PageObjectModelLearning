@@ -39,7 +39,8 @@ public class HomePageTest extends TestBase{
 	}
 	
 	@Test(priority=1)
-	public void verifyHomePageTitleTest(){
+	public void verifyHomePageTitleTest() throws InterruptedException{
+		Thread.sleep(2000);   // added sleep so that page gets fully developed
 	    String homePageTitle = homePage.verifyHomePageTitle();
 		Assert.assertEquals(homePageTitle, "CRMPRO" , "Home page title not matched");
 	}
